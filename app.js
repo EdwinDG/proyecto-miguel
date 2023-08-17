@@ -21,7 +21,7 @@ app.use("/api/ticket", ticket)
 app.use("/api/vendedor", vendedor)
 
 app.listen(process.env.PORT,()=>{
+    console.log(`Servidor escuchando en el puerto ${process.env.PORT}`);
     mongoose.connect(process.env.mongoDB)
     .then(() => console.log('Conexion Activa'));
-    console.log(`Servidor escuchando en el puerto ${process.env.PORT}`);
 })
