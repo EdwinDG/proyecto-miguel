@@ -8,9 +8,12 @@ import horario from "./routes/horario.js";
 import ruta from "./routes/ruta.js"
 import ticket from "./routes/ticket.js"
 import vendedor from "./routes/vendedor.js"
+import cors from "cors"
 
 const app = express()
 app.use(express.json()) 
+
+app.use(cors())
 
 app.use("/api/bus", bus)
 app.use("/api/cliente", cliente)
