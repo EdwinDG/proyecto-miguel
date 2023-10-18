@@ -39,12 +39,14 @@ router.delete('/conductor/:id',[
     check("id", "Digite el id").isMongoId(),
     validarCampos
 ], httpConductor.deleteConductor);
-router.put('inactivarConductor/:id',[
+
+router.put('/inactivarConductor/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos
 ],httpConductor.putConductorInactivar)
-router.put('activarConductor/:id',[
+
+router.put('/activarConductor/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos

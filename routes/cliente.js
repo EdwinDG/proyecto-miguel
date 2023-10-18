@@ -38,12 +38,13 @@ router.delete('/cliente/:id',[
     validarCampos
 ], httpCliente.deleteCliente);
 
-router.put('inactivarCliente/:id',[
+router.put('/inactivarCliente/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos
 ],httpCliente.putClienteInactivar)
-router.put('activarCliente/:id',[
+
+router.put('/activarCliente/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos

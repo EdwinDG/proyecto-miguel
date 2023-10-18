@@ -40,13 +40,13 @@ router.delete('/ruta/:id',[
     validarCampos
 ],httpRuta.deleteRuta);
 
-router.put('inactivarRuta/:id',[
+router.put('/inactivarRuta/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos
 ],httpRuta.putRutaInactivar)
     
-router.put('activarRuta/:id',[
+router.put('/activarRuta/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos

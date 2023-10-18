@@ -46,13 +46,14 @@ router.delete('/vendedor/:id',[
     validarCampos,
 ], httpVendedor.deleteVendedor);
 
-router.put('inactivarVendedor/:id',[
+router.put('/inactivarVendedor/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos,
     validarJWT
 ],httpVendedor.putVendedorInactivar)
-router.put('activarVendedor/:id',[
+
+router.put('/activarVendedor/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos,

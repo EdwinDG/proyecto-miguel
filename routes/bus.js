@@ -36,12 +36,12 @@ router.delete('/bus/:id',[
     validarCampos
 ], httpBus.deleteBus);
 
-router.put('inactivarBus/:id',[
+router.put('/inactivarBus/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos
 ],httpBus.putBusInactivar)
-router.put('activarBus/:id',[
+router.put('/activarBus/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos

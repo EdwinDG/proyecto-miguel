@@ -38,12 +38,13 @@ router.delete('/horario/:id',[
     validarCampos
 ], httpHorario.deleteHorario);
 
-router.put('inactivarHorario/:id',[
+router.put('/inactivarHorario/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos
 ],httpHorario.putHorarioInactivar)
-router.put('activarHorario/:id',[
+
+router.put('/activarHorario/:id',[
     check("id", "Digite el id").not().isEmpty(),
     check("id", "Digite el id").isMongoId(),
     validarCampos
